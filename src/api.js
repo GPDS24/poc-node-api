@@ -6,11 +6,6 @@ const app = express();
 
 app.use(bodyParser.json());
 
-let tasks = [
-  { id: 1, title: 'Task 1', description: 'Do something' },
-  { id: 2, title: 'Task 2', description: 'Do something else' },
-];
-
 // Get all tasks
 app.get('/tasks', (req, res) => {
   const tasks = tasksRepository.getAll()
